@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demented Mojo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Demented Mojo</h1>
+        <p class="tagline">A TropSys Brand</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome</h2>
+            <p>This is the official home of the Demented Mojo brand. A full site is coming soon.</p>
+        </section>
+
+        <section class="status">
+            <h2>Current Status</h2>
+            <ul>
+                <li>✔ Domain authenticated</li>
+                <li>✔ Google Workspace email active</li>
+                <li>✔ Static site deployed</li>
+                <li>⏳ Dynamic Proxmox site in development</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> TropSys Inc. — All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
