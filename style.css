@@ -1,54 +1,118 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #0b0b0b;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background: #111;
-    color: #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
 
-header {
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.social-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff0055;
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid #7ad9a1;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
-    background: #222;
+    padding: 40px 20px;
 }
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+header img {
+    width: min(60vw, 300px);
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.brand {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #bbbbbb;
+    margin: 0 0 40px;
 }
 
 .tagline {
     font-size: 1.2rem;
-    color: #aaa;
+    color: #888;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0;
 }
 
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+@media (max-width: 560px) {
+    .top-bar {
+        padding: 14px 16px;
+    }
 
-section {
-    margin-bottom: 40px;
-}
+    .social-links {
+        justify-content: center;
+        width: 100%;
+        gap: 0.75rem 1rem;
+    }
 
-h2 {
-    border-bottom: 2px solid #444;
-    padding-bottom: 10px;
-}
+    .brand {
+        letter-spacing: 0.08em;
+    }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+    .subtitle {
+        margin-bottom: 24px;
+    }
 
-li {
-    padding: 8px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: #aaa;
+    .tagline {
+        font-size: 1rem;
+    }
 }
